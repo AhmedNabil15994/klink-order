@@ -1,0 +1,805 @@
+$color1: rgba(102,51,153,.28);
+$color2: #7569b3;
+$color3: #639;
+$colortxt: #70657b;
+$bgcolor: #f8f9fa;
+$bgwhite: #fff;
+
+
+/*================================================
+============ [  Table of contents  ] ============
+================================================
+01 - Global
+02 - Navbar
+03 - Sidebar
+04 - Main Content
+05 - Box card
+06 - Side meun
+07 - Column Left
+08 - Column right
+09 - User Activity
+10 - New user
+11 - Top Selling
+12 - Pricing
+===============================================*/
+.scrollbar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 50px;
+	background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar{
+	width: 0px;
+	background-color: #F5F5F5;
+}
+.scrollbar:hover::-webkit-scrollbar{
+	width: 8px;
+}
+.scrollbar::-webkit-scrollbar-thumb{
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+	border-radius: 50px;
+	background-color: rgba(85, 85, 85, 0.4);
+}
+/***********************************
+1. Start Global
+***********************************/
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+}
+button{
+    background: transparent;
+    border: 0px;
+    border-radius: 50px;
+    outline: 0;
+    cursor: pointer;
+}
+.container {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.clearfix{
+    clear: both;
+}
+/***********************************
+End Global
+***********************************/
+
+
+/***********************************
+2. Start Navbar
+***********************************/
+nav {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    top: 0;
+    background: white;
+    box-shadow: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+    .container{
+        display: inherit;
+        align-items: inherit;
+    }
+    .navbar-logo img{
+        height: 60px;
+        width: auto;
+        float: left;
+    }
+    .menu{
+        display: flex;
+        margin-left: auto;
+        .fullscreen,.menu-drop,.notificaiton{
+            align-items: center;
+            display: flex;
+            background: $bgcolor;
+            margin: auto 10px;
+            height: 40px;
+            width: 40px;
+            border-radius: 15px;
+            cursor: pointer;
+            i{
+                margin: 0 auto;
+                display: block;
+                color: $color2;
+            }
+        }
+        .menu-drop{
+            position: relative;
+            .menu-icon{
+                display: none;
+                position: absolute;
+                top: 45px;
+                right: -90px;
+                width: 280px;
+                background-color: $bgwhite;
+                box-shadow: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+                padding: 15px;
+                a{
+                    width: 50%;
+                    text-align: center;
+                    padding: 20px 10px;
+                    display: block;
+                    float: left;
+                    text-decoration: none;
+                    &:hover{
+                        background-color: $bgcolor;
+                        border-radius: 15px;
+                    }
+                    i{
+                        padding-bottom: 10px;
+                        font-size: 24px;
+                    }
+                }
+            }
+            &:hover .menu-icon{
+                display: block;
+            }
+        }
+        .notificaiton{
+            position: relative;
+            .notificaiton-drop{
+                display: none;
+                width: 320px;
+                position: absolute;
+                top: 45px;
+                right: -80px;
+                box-shadow: 0 1px 15px rgba(0,0,0,.06), 0 1px 6px rgba(0,0,0,.06);
+                .notification-message{
+                    width: 100%;
+                    float: left;
+                    background-color: $bgcolor;
+                    height: 70px;
+                    border-bottom: 3px solid $color2;
+                    display: flex;
+                    align-items: center;
+                    & > div{
+                        float: left;
+                    }
+                    .icon{
+                        width: 20%;
+                        height: 100%;
+                        border-left: 5px solid $color2;
+                        display: flex;
+                        background: #eee;
+                        i{
+                            font-size: 26px;
+                            display: flex;
+                            align-items: center;
+                            
+                        }
+                    }
+                    .content{
+                        width: 80%;
+                        color: $colortxt;
+                        position: relative;
+                        line-height: 1.6;
+                        padding-left: 8px;
+                        .message{
+                            font-size: 15px;
+                            font-weight: 500;
+                        }
+                        .badge{
+                            border-radius: 13px;
+                            background: $color1;
+                            padding: 0px 6px 1px;
+                            font-size: 12px;
+                        }
+                        .text-time{
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            padding: 8px 5px 0 0;
+                            font-size: 12px;
+                        }
+                        p{
+                            margin: 0;
+                            font-size: 14px;
+                        }
+                    }
+                    &:last-child{
+                        border-bottom: 0px;
+                    }
+                    &:hover{
+                        background-color: $bgwhite;
+                    }
+                }                
+            }
+            &:hover .notificaiton-drop{
+                display: block;
+            }
+        }
+        .user img{
+            margin-left: 10px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+    }
+}
+/***********************************
+End Navbar
+***********************************/
+
+/***********************************
+3. Start side-bar
+***********************************/
+.side-bar{
+    position: fixed;
+    top: 80px;
+    height: calc(100vh - 80px);
+    background: $bgwhite;
+    box-shadow: 0 4px 20px 1px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.08);
+    float: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .navigation-one{
+        list-style: none;
+        text-align: center;
+        width: 120px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        .nav-item{
+            color: #332e38;
+            cursor: pointer;
+            border-bottom: 1px solid #dee2e6;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+                text-decoration: none;
+                i{
+                    font-size: 32px;
+                    height: 32px;
+                    width: 32px;
+                    display: block;
+                    margin: 0 auto 6px;
+                    color: $color3;
+                }
+                span{
+                    font-size: 15px;
+                    display: block;
+                    font-weight: 400;
+                    color: $color2;
+                }
+            }
+            &:hover::after{
+                content: " ";
+                width: 65px;
+                height: 65px;
+                background: #639;
+                bottom: -35px;
+                right: -35px;
+                position: absolute;
+                transform: rotatez(45deg);
+            }
+        }
+        .nav-item{
+            position: relative;
+            .nav-child{
+                display: none;
+                position: fixed;
+                left: 120px;
+                z-index: 5;
+                background:$bgwhite;
+                width: 220px;
+                top: 80px;
+                box-shadow: 0 4px 20px 1px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.08);
+                height: 100vh;
+                ul{
+                    list-style: none;
+                    padding: 0;
+                    display: block;
+                    li{
+                        padding: 10px 0;
+                        i{
+                            font-size: 18px;
+                            color: $color2;
+                        }
+                        a{
+                            color: #332e38;
+                            text-transform: capitalize;
+                            display: inline-block;
+                            align-items: center;
+                            font-size: 13px;
+                            cursor: pointer;
+                            padding: 12px 24px;
+                            transition: all .15s ease-in;
+                        }
+                        &:hover{
+                            background: #eee;
+                        }
+                    }
+                }
+            }
+            &:hover .nav-child{
+                display: block;
+            }
+        }
+    }
+}
+/***********************************
+3. End side-bar
+***********************************/
+
+/***********************************
+4. Start Main Content
+***********************************/
+.main-content{
+    width: calc(100% - 120px);
+    margin-top: 80px;
+    position: static;
+    float: right;
+    padding: 25px 35px 0 35px;
+    .bar-version{
+        border-bottom: 2px solid #eee;
+        h3{
+            display: inline-block;
+            padding-right: 10px;
+            font-size: 28px;
+            font-weight: 300;
+            margin: 0 0 10px;
+        }
+        span{
+            font-size: 14xp;
+            span{
+                color: $color2;
+            }
+        }
+    }
+    
+/***********************************
+5. Start Box card
+***********************************/
+    .box-card{
+        display: flex;
+        justify-content: space-between;
+        .card{
+            background: $bgwhite;
+            display: flex;
+            flex-grow: 1;
+            margin: 20px 12px;
+            box-shadow: 0 4px 20px 1px rgba(248, 227, 227, 0.06), 0 1px 4px rgba(0,0,0,.08);
+            border-radius: 10px;
+            padding: 35px 10px; 
+            i{
+                width: 40%;
+                float: left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 50px;
+                color: $color2;
+            }
+            .content{
+                width: 60%;
+                float: left;
+                margin: auto;
+                p{
+                    margin-bottom: 0;
+                }
+                .text-muted{
+                    font-size: 14px;
+                    color: $color2;
+                    font-weight: 300;
+                    margin: 0px;
+                }
+                .text-primary{
+                    margin: 0px;
+                    color: $color3;
+                    font-size: 22px;
+                    font-weight: 300;
+                }
+            }
+            &:first-child{
+                margin-left: 0;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+/***********************************
+6. Side meun
+***********************************/
+    .side-meun{
+        display: flex;
+        align-content: space-between;
+        .column{  
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            flex-shrink: 0;
+            width: 49.5%;
+            &:first-child{
+                margin-right: 2%;
+            }
+            &:last-child{
+                width: 48.5%;
+            }
+        }
+/***********************************
+7. Start Column Left
+***********************************/
+
+/***********************************
+9. User Activity
+***********************************/
+        .user-activity{
+            overflow: hidden;
+            padding: 25px 20px;
+            background-color: $bgwhite;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px 1px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.08);
+            margin-bottom: 25px;
+            .card-title{
+                font-size: 18px;
+                padding-bottom: 20px;
+                border-bottom: 2px solid #eee;
+                .badge{
+                    color: #47404f;
+                    background-color: #ffc107;
+                    float: right;
+                    font-weight: 500;
+                    font-size: 15px;
+                    border-radius: 50px;
+                    padding: 4px 10px 2px;
+                }
+            }
+            .row-content{
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 5px 20px 5px;
+                border-bottom: 2px solid #eee;
+                .col-content{
+                    text-align: left;
+                    span{
+                        color: $color2;
+                        font-size: 14px;
+                    }
+                    h5{
+                        margin:0;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+                &:last-child{
+                    padding: 20px 5px 0px 5px;
+                    border-bottom: 0;
+                }
+            }
+        }
+
+/***********************************
+10. New user
+***********************************/
+        .new-user{
+            overflow: hidden;
+            padding: 25px 20px;
+            margin-right: 0.5%;
+            background-color: $bgwhite;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px 1px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.08);
+            margin-bottom: 30px;
+            .card-header{
+                margin-bottom: 8px;
+                h3{
+                    display: inline-block;
+                    font-size: 18px;
+                    padding-top: 10px;
+                    margin: 0;
+                    font-weight: 500;
+                    float: left;
+                }
+                .dropdown{
+                    float: right;
+                    position: relative;
+                    margin-bottom: 8px;
+                    button{
+                        float: right;
+                        i{
+                            align-items: center;
+                            display: flex;
+                            background: #f8f9fa;
+                            margin: 0 auto;
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 15px;
+                            cursor: pointer;
+                            justify-content: center;
+                        }
+                    }
+                    .dropdown-menu{
+                        display: none;
+                        width: 200px;
+                        position: absolute;
+                        top: 40px;
+                        right: 5px;
+                        padding: 10px 0px;
+                        background-color: $bgwhite;
+                        border-radius: 5px;
+                        box-shadow: 0 4px 20px 1px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.08);
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            width: 100%;
+                            padding: 15px 5px;
+                            font-weight: 400;
+                            color: #47404f;
+                            text-align: center;
+                            &:hover{
+                                background: #eee;
+                            }
+                        }
+                    }
+                    &:hover .dropdown-menu{
+                        display: block;
+                    }
+                }
+            }
+            .table-user{
+                width: 100%;
+                background-color: transparent;
+                border-collapse: collapse;
+                table{
+                    width: 100%;
+                    thead{
+                        tr{
+                            font-weight: 500;
+                            th{
+                                padding: 12px;
+                                border-top: 1px solid #dee2e6;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            th{
+                                font-size: 14px;
+                            }
+                            td{
+                                font-size: 14px;
+                                img{
+                                    height: 40px;
+                                    width: 40px;
+                                    border-radius: 50px;
+                                    display: block;
+                                    margin: 0 auto;
+                                }
+                                span{
+                                    font-size: 12px;
+                                    text-align: center;
+                                    display: block;
+                                }
+                                .badge{
+                                    border-radius: 5px;
+                                    text-align: center;
+                                    display: inline-block;
+                                    color: white;
+                                    padding: 2px 5px 1px;
+                                }
+                                .badge-success{
+                                    background: #4CAF50;
+                                }
+                                .badge-info{
+                                    background: #263db5;
+                                }
+                                .badge-warning{
+                                    background: #ffc107;
+                                }
+                                .icon{
+                                    display: flex;
+                                    justify-content: space-around;
+                                    width: 75%;
+                                    margin: 0 auto;
+                                    a{
+                                        i{
+                                            font-size: 16px;
+                                        }
+                                        &:last-child{
+                                            padding-right: 0;
+                                        }
+                                    }
+                                }
+                                &:nth-child(5){
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+/***********************************
+End Column right
+***********************************/
+
+
+/***********************************
+8. Start Column right
+***********************************/
+/***********************************
+11. Top Selling
+***********************************/
+        .top-Selling{
+            overflow: hidden;
+            padding: 25px 20px;
+            margin-right: 0.5%;
+            background-color: $bgwhite;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px 1px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.08);
+            .card-title{
+                font-size: 18px;
+                font-weight: 300;
+                padding-bottom: 15px;
+            }
+            .card-body{
+                width: 100%;
+                min-height: 80px;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                .image-card{
+                    padding: 5px;
+                    width: 80px;
+                    height: 75px;  
+                    object-fit: cover;
+                }
+                .content{
+                    padding: 4px 2px 0px 5px;
+                    margin-bottom: 5px;
+                    flex-grow: 6;
+                    h5{
+                        font-size: 16px;
+                        font-weight: normal;
+                        line-height: 1.2;
+                        margin: 0;
+                        color: $color1;
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+                    .description{
+                        margin: 0;
+                        font-size: 12px;
+                        font-weight: 300;
+                        padding-top: 5px;
+                    }
+                    .price{
+                        margin: 0;
+                        font-size: 14px;
+                        display: inline-block;
+                        padding-top: 8px;
+                        color: #d22346;
+                        del{
+                            font-size: 12px;
+                            color: #454545;
+                        }
+                    }
+                }
+                .view-details{
+                    display: flex;
+                    align-items: center;
+                    button{
+                        margin: 0;
+                        padding: 7px 8px 6px;
+                        font-size: 12px;
+                        border: 1px solid $color2;
+                        border-radius: 25px;
+                    }
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+/***********************************
+End Column right
+***********************************/
+/***********************************
+12- Start pricing
+***********************************/
+.pricing{
+    display: flex;
+    justify-content: space-between;
+    .box-pricing{
+        background: $bgwhite;
+        display: flex;
+        flex-grow: 1;
+        margin: 20px 12px;
+        box-shadow: 0 4px 20px 1px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.08);
+        border-radius: 10px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 15px;
+        transition: all 0.5s ease-in-out;
+        &:first-child{
+            margin-left: 0;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+        .plan-head{
+            display: flex;
+            justify-content: space-between;
+            background-color: $color2;
+            min-height: 80px;
+            .plan-name{
+                margin: 0;
+                display: flex;
+                align-items: center;
+                color: #fff;
+                padding-left: 10px;
+                font-size: 32px;
+                font-weight: 700;
+            }
+            .plan-price{
+                display: flex;
+                align-items: center;
+                padding-right: 10px;
+                font-size: 15px;
+                color: #fff;
+                strong{
+                    font-size: 48px;
+                }
+                .small{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .pct{
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+        .plan-details{
+            list-style: none;
+            padding: 0;
+            li{
+                padding-left: 14px;
+                padding-top: 12px;
+                &:first-child{
+                    padding-top: 15px;
+                }
+            }
+        }
+        .buy{
+            min-height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button{
+                background: $color2;
+                color: #fff;
+                min-width: 110px;
+                min-height: 30px;
+                font-weight: 300;
+            }
+        }
+        &:hover{
+            transform: scale(1.08, 1.08);
+            box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.15), 0 1px 4px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+/***********************************
+End pricing
+***********************************/

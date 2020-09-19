@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <title>template responsive</title>
+        <!-- font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/>
+
+        <!-- css file -->
+        <link rel="stylesheet" href="assets/css/normalize.css"/>
+        <link rel="stylesheet" href="assets/css/navAndsidebar.css"/>
+        <link rel="stylesheet" href="assets/css/homepage.css"/>
+    </head>
+    <body>
+        <!-- Start navbar -->
+        <nav>
+            <div class="container">
+                <a class="navbar-logo" href="#">
+                    <img src="http://gull-html-laravel.ui-lib.com/assets/images/logo.png"/>
+                </a>
+                <button id="close-open-navleft"><i class="fas fa-bars"></i></button>
+                <div class="menu">
+                        <div class="fullscreen"><i class="fas fa-arrows-alt"></i></div>
+                        <div class="menu-drop">
+                            <!-- menu-drop -->
+                            <i class="fas fa-inbox"></i>
+                                <div class="menu-icon">
+                                    <a href="#"><i class="fas fa-chart-area"></i> Home</a>
+                                    <a href="#"><i class="fas fa-book-reader"></i> UI Kits</a>
+                                    <a href="#"><i class="fas fa-suitcase"></i> Apps</a>
+                                    <a href="#"><i class="fas fa-shield-alt"></i> Forms</a>
+                                    <a href="#"><i class="fas fa-tools"></i> Sessions</a>
+                                    <a href="#"><i class="fas fa-inbox"></i> Support</a>
+                                </div>
+                        </div>
+                        <div class="notificaiton">
+                            <i class="fas fa-bell"></i>
+                            <!-- notificaiton box -->
+                            <div class="notificaiton-drop">
+                                    <div class="notification-message">
+                                        <div class="icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="message">New message</span>
+                                            <span class="badge">new</span>
+                                            <span class="text-time">10 sec ago</span>
+                                            <p class="text-small">James: Hey! are you busy?</p>
+                                        </div>
+                                    </div>
+                                    <div class="notification-message">
+                                        <div class="icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="message">New order received</span>
+                                            <span class="badge">new</span>
+                                            <span class="text-time">10 sec ago</span>
+                                            <p class="text-small">James: Hey! are you busy?</p>
+                                        </div>
+                                    </div>
+                                    <div class="notification-message">
+                                        <div class="icon">
+                                            <i class="fas fa-envelope-open"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="message">Product out of stock</span>
+                                            <span class="badge">new</span>
+                                            <span class="text-time">10 sec ago</span>
+                                            <p class="text-small">James: Hey! are you busy?</p>
+                                        </div>
+                                    </div>
+                                    <div class="notification-message">
+                                        <div class="icon">
+                                            <i class="far fa-envelope-open"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="message">Server Up!</span>
+                                            <span class="badge">new</span>
+                                            <span class="text-time">10 sec ago</span>
+                                            <p class="text-small">James: Hey! are you busy?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="user"><img src="assets/img/personal.JPG"/></div>
+                </div>
+            </div>
+        </nav>
+        <!-- End navbar -->
+        <!-- Start side bar -->
+        <div class="side-bar scrollbar" id="side-bar">
+            <ul class="navigation-one">
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-chart-area"></i>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                    <div class="nav-child">
+                        <ul>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 1</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 2</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 3</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 4</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 5</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-book-reader"></i>
+                        <span class="nav-text">UI kits</span>
+                    </a>
+                    <div class="nav-child">
+                        <ul>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 6</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 7</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 8</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 9</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 10</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-suitcase"></i>
+                        <span class="nav-text">Extra kits</span>
+                    </a>
+                    <div class="nav-child">
+                        <ul>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 11</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 12</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 13</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 14</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 15</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="tour.html">
+                        <i class="fas fa-shield-alt"></i>
+                        <span class="nav-text">Tours</span>
+                    </a>
+                    <div class="nav-child">
+                        <ul>
+                            <li><i class="fas fa-inbox"></i><a href="tour.html">Tour 1</a></li>
+                            <li><i class="fas fa-inbox"></i><a href="#">Tour 2</a></li>
+                            <li><i class="fas fa-inbox"></i><a href="#">Tour 3</a></li>
+                            <li><i class="fas fa-inbox"></i><a href="#">Tour 4</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-paste"></i>
+                        <span class="nav-text">Forms</span>
+                    </a>
+                    <div class="nav-child">
+                        <ul>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 21</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 22</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 23</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 24</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 25</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-sliders-h"></i>
+                        <span class="nav-text">Datatables</span>
+                    </a>
+                    <div class="nav-child">
+                        <ul>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 26</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 27</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 28</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 29</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 30</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-tools"></i>
+                        <span class="nav-text">Sessions</span>
+                    </a>
+                    <div class="nav-child">
+                        <ul>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 31</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 32</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 33</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 34</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 35</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-check-double"></i>
+                        <span class="nav-text">Others</span>
+                    </a>
+                    <div class="nav-child">
+                        <ul>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 36</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 37</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 38</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 39</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 40</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-inbox"></i>
+                        <span class="nav-text">Doc</span>
+                    </a>
+                    <div class="nav-child">
+                        <ul>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 41</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 42</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 43</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 44</a></li>
+                            <li><i class="fas fa-inbox"></i><a herf="#">version 45</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- End side bar -->
+
+
+        <!-- Start content page-->
+        <div class="main-content" id="main-content">
+            <div class="bar-version"><h3>Version 1</h3><span>Dashboard | <span>Version 1</span></span></div><!--\version bar-->
+            <!-- Start four box-->
+            <div class="box-card">
+                <div class="card">
+                    <i class="fas fa-user"></i>
+                    <div class="content">
+                        <p>New Leads</p>
+                        <p class="text-primary">205</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <div class="content">
+                        <p>Sales</p>
+                        <p class="text-primary">$4021</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-briefcase"></i>
+                    <div class="content">
+                        <p>Orders</p>
+                        <p class="text-primary">80</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="far fa-money-bill-alt"></i>
+                    <div class="content">
+                        <p>Expense</p>
+                        <p class="text-primary">$1200</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End four box-->
+
+            <!-- Start Side Meun-->
+            <div class="side-meun">
+                <!-- Start side-left -->
+                <div class="column">
+                    <!-- Start User Activity -->
+                    <div class="user-activity">
+                        <div class="card-title">
+                            <span>User activity</span>
+                            <span class="badge">Updated daily</span>
+                        </div>
+                        <div class="row-content">
+                            <div class="col-content">
+                                <span>Pages / Visit</span>
+                                <h5>2065</h5>
+                            </div>
+                            <div class="col-content">
+                                <span>New user</span>
+                                <h5>465</h5>
+                            </div>
+                            <div class="col-content">
+                                <span>Last week</span>
+                                <h5>23456</h5>
+                            </div>
+                        </div>
+                        <div class="row-content">
+                            <div class="col-content">
+                                <span>Pages / Visit</span>
+                                <h5>1829</h5>
+                            </div>
+                            <div class="col-content">
+                                <span>New user</span>
+                                <h5>735</h5>
+                            </div>
+                            <div class="col-content">
+                                <span>Last week</span>
+                                <h5>92565</h5>
+                            </div>
+                        </div>
+                        <div class="row-content">
+                            <div class="col-content">
+                                <span>Pages / Visit</span>
+                                <h5>3165</h5>
+                            </div>
+                            <div class="col-content">
+                                <span>New user</span>
+                                <h5>165</h5>
+                            </div>
+                            <div class="col-content">
+                                <span>Last week</span>
+                                <h5>32165</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End User Activity -->
+                    <!-- Start New User -->
+                    <div class="new-user">
+                        <div class="card-header">
+                            <h3>New Users</h3>
+                            <div class="dropdown">
+                                <button>
+                                    <i class="fas fa-cogs"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a href="#">Add new user</a>
+                                    <a href="#">View All users</a>
+                                    <a href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="table-user">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Avatar</th>
+                                            <th>Email</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- row content-->
+                                        <tr>
+                                            <th>1</th>
+                                            <td>Smith Doe</td>
+                                            <td>
+                                                <img src="assets/img/personal.JPG" alt="">
+                                            </td>
+                                            <td>Smith@gmail.com</td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                            <td>
+                                                <div class="icon">
+                                                    <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="#"><i class="fas fa-times"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- row content-->
+                                        <tr>
+                                            <th>2</th>
+                                            <td>Jhon Doe</td>
+                                            <td>
+                                                <img src="assets/img/personal.JPG" alt="">
+                                            </td>
+                                            <td>Jhon@gmail.com</td>
+                                            <td><span class="badge badge-info">Pending</span></td>
+                                            <td>
+                                                <div class="icon">
+                                                    <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="#"><i class="fas fa-times"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- row content-->
+                                        <tr>
+                                            <th>3</th>
+                                            <td>Alex</td>
+                                            <td>
+                                                <img src="assets/img/personal.JPG" alt="">
+                                            </td>
+                                            <td>Otto@gmail.com</td>
+                                            <td><span class="badge badge-warning">Not Active</span></td>
+                                            <td>
+                                                <div class="icon">
+                                                    <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="#"><i class="fas fa-times"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- row content-->
+                                        <tr>
+                                            <th>4</th>
+                                            <td>Mathew Doe</td>
+                                            <td>
+                                                <img src="assets/img/personal.JPG" alt="">
+                                            </td>
+                                            <td>Mathew@gmail.com</td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                            <td>
+                                                <div class="icon">
+                                                    <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="#"><i class="fas fa-times"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>  
+                    <!-- End New User -->
+                </div>
+                <!-- End side-left -->
+
+                <!-- start side-right -->
+                <div class="column">
+                    <!-- top Selling -->
+                    <div class="top-Selling">
+                        <div class="card-title">Top Selling Products</div>
+                        <!-- card-box -->
+                        <div class="card-body">
+                            <img class="image-card" src="assets/img/1.JPG" alt="">
+                            <div class="content">
+                                <h5><a href="#">Wireless Headphone E23</a></h5>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur.</p>
+                                <p class="price">$450 <del>$500</del></p>
+                            </div>
+                            <div class="view-details">
+                                <button>View details</button>
+                            </div>
+                        </div>
+                        <!-- card-box -->
+                        <div class="card-body">
+                            <img class="image-card" src="assets/img/2.JPG" alt="">
+                            <div class="content">
+                                <h5><a href="#">Wireless Headphone Y902</a></h5>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur.</p>
+                                <p class="price">$550 <del>$600</del></p>
+                            </div>
+                            <div class="view-details">
+                                <button>View details</button>
+                            </div>
+                        </div>
+                        <!-- card-box -->
+                        <div class="card-body">
+                            <img class="image-card" src="assets/img/3.JPG" alt="">
+                            <div class="content">
+                                <h5><a href="#">Wireless Headphone E09</a></h5>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur.</p>
+                                <p class="price">$250 <del>$300</del></p>
+                            </div>
+                            <div class="view-details">
+                                <button>View details</button>
+                            </div>
+                        </div>
+                        <!-- card-box -->
+                        <div class="card-body">
+                            <img class="image-card" src="assets/img/4.JPG" alt="">
+                            <div class="content">
+                                <h5><a href="#">Wireless Headphone X89</a></h5>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur.</p>
+                                <p class="price">$450 <del>$500</del></p>
+                            </div>
+                            <div class="view-details">
+                                <button>View details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Top Selling -->
+                </div>
+                <!-- End side-right -->
+            </div>
+            <div class="pricing">
+                <div class="box-pricing">
+                    <div class="plan-head">
+                        <p class="plan-name">Standard</p>
+                        <div class="plan-price">
+                        <strong>3</strong>
+                            <div class="small">
+                                <span class="pct">.99$</span>
+                                <span>month</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="plan-details">
+                        <li><strong>FREE</strong> custom domain</li>
+                        <li><strong>Unlimited</strong> email addresses</li>
+                        <li><strong>Unlimited</strong> Bandwidth</li>
+                        <li><strong>200GB</strong> Storage</li>
+                        <li><strong>No Support Ads</strong></li>
+                        <li><strong>Quick Install</strong> Apps (WordPress, etc)</li>
+                        <li><strong>VPS Hosting</strong></li>
+                        <li><strong>24/7</strong> Customer Support</li>
+                    </ul>
+                    <div class="buy">
+                        <a href="#"><button>Buy Now</button></a>
+                    </div>
+                </div>
+                <div class="box-pricing active">
+                    <div class="plan-head">
+                        <p class="plan-name">professional</p>
+                        <div class="plan-price">
+                        <strong>5</strong>
+                            <div class="small">
+                                <span class="pct">.99$</span>
+                                <span class="year">year</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="plan-details">
+                        <li><strong>FREE</strong> custom domain</li>
+                        <li><strong>Unlimited</strong> email addresses</li>
+                        <li><strong>Unlimited</strong> Bandwidth</li>
+                        <li><strong>200GB</strong> Storage</li>
+                        <li><strong>No Support Ads</strong></li>
+                        <li><strong>Quick Install</strong> Apps (WordPress, etc)</li>
+                        <li><strong>VPS Hosting</strong></li>
+                        <li><strong>24/7</strong> Customer Support</li>
+                    </ul>
+                    <div class="buy">
+                        <a href="#"><button>Buy Now</button></a>
+                    </div>
+                </div>
+                <div class="box-pricing">
+                    <div class="plan-head">
+                        <p class="plan-name">professional plus</p>
+                        <div class="plan-price">
+                        <strong>15</strong>
+                            <div class="small">
+                                <span class="pct">.99$</span>
+                                <span>month</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="plan-details">
+                        <li><strong>FREE</strong> custom domain</li>
+                        <li><strong>Unlimited</strong> email addresses</li>
+                        <li><strong>Unlimited</strong> Bandwidth</li>
+                        <li><strong>200GB</strong> Storage</li>
+                        <li><strong>No Support Ads</strong></li>
+                        <li><strong>Quick Install</strong> Apps (WordPress, etc)</li>
+                        <li><strong>VPS Hosting</strong></li>
+                        <li><strong>24/7</strong> Customer Support</li>
+                    </ul>
+                    <div class="buy">
+                        <a href="#"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div><!---->
+
+
+        </div>
+        <!-- End content body-->
+        <!-- Js file -->
+        <script src="assets/js/nav.js"></script>
+    </body>
+</html>

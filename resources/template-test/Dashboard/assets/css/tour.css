@@ -1,0 +1,224 @@
+.tour-show {
+  display: flex;
+  justify-content: space-between; }
+.tour-show .icon-order {
+  height: 52px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
+  padding: 25px 0px; }
+.tour-show .icon-order a {
+  text-decoration: none;
+  color: #7569b3;
+  display: flex;
+  align-items: flex-end; }
+.tour-show .icon-order a i {
+  font-size: 20px;
+  margin-right: 3px; }
+.tour-show .side-left {
+  flex-basis: 20%; }
+.tour-show .side-left .filter {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
+.tour-show .side-left .filter p {
+  flex-basis: 100%; }
+.tour-show .side-left .filter button {
+  text-transform: capitalize;
+  flex-basis: 40%;
+  background: #7569b3;
+  padding: 5px 12px;
+  color: #fff;
+  margin-bottom: 5px;
+  margin-right: 2%; }
+.tour-show .side-left .details {
+  padding-bottom: 5px; }
+.tour-show .side-left .details span {
+  font-weight: 300; }
+.tour-show .side-left .details p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+  padding-top: 5px; }
+.tour-show .side-left p {
+  margin-top: 10px; }
+.tour-show .side-left .tour-main-nav {
+  list-style: none;
+  padding-left: 0; }
+.tour-show .side-left .tour-main-nav li {
+  padding-bottom: 18px;
+  font-weight: 300;
+  cursor: move; }
+.tour-show .side-left .tour-main-nav li i {
+  color: #7569b3; }
+.tour-show .side-left .tour-main-nav li a {
+  text-decoration: none;
+  color: #7569b3; }
+.tour-show .side-right {
+  flex-basis: 38%;
+  display: flex;
+  box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
+  border-radius: 10px 0px 0px 10px;
+  overflow: hidden;
+  flex-direction: column;
+  margin-bottom: 20px; }
+.tour-show .side-right .frist-sidebar {
+  flex-basis: 100%;
+  border-right: 1px solid #eee;
+  z-index: 15; }
+.tour-show .side-right .frist-sidebar .drag-sort-active {
+  background: #cde2f8; }
+.tour-show .side-right .frist-sidebar .tour-item {
+  display: flex;
+  height: 80px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  align-items: center;
+  padding: 0px 15px; }
+.tour-show .side-right .frist-sidebar .tour-item .image img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%; }
+.tour-show .side-right .frist-sidebar .tour-item .details {
+  flex: 1;
+  margin-left: 8px; }
+.tour-show .side-right .frist-sidebar .tour-item .details span {
+  font-weight: 300; }
+.tour-show .side-right .frist-sidebar .tour-item .details p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+  padding-top: 5px; }
+.tour-show .side-right .frist-sidebar .tour-item .trip-details {
+  display: flex;
+  flex-direction: column;
+  text-align: right; }
+.tour-show .side-right .frist-sidebar .tour-item .trip-details span {
+  font-weight: 300;
+  font-size: 14px; }
+.tour-show .side-right .frist-sidebar .tour-item .trip-details p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+  padding-top: 5px; }
+.tour-show .side-right .frist-sidebar .tour-item:last-child {
+  border-bottom: 0px solid #eee; }
+.tour-show .side-right .frist-sidebar .tour-item:hover {
+  background: #f8f9fa; }
+.tour-show .side-right .frist-sidebar .active {
+  background: #eee; }
+.tour-show .secondary-sidebar {
+  flex-basis: 43%;
+  box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
+  border-radius: 0px 10px 10px  0px;
+  z-index: 20;
+  margin-bottom: 20px; }
+.tour-show .secondary-sidebar .detalis ul {
+  padding: 0;
+  margin: 0; }
+.tour-show .secondary-sidebar .detalis ul li {
+  border-bottom: 1px solid #7569b3;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+.tour-show .secondary-sidebar .detalis ul li .stop-number {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 40%;
+  border-right: 1px solid #eee;
+  padding: 15px 10px 15px 10px; }
+.tour-show .secondary-sidebar .detalis ul li .stop-time {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 48%;
+  border-right: 1px solid #eee;
+  padding: 15px 10px 15px 10px; }
+.tour-show .secondary-sidebar .detalis ul li .stop-time i {
+  padding-right: 5px;
+  color: #7569b3; }
+.tour-show .secondary-sidebar .detalis ul li a {
+  flex-basis: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; }
+.tour-show .secondary-sidebar .detalis ul li .address {
+  padding: 15px 10px 15px 10px;
+  width: 100%;
+  border-top: 1px solid #eee; }
+.tour-show .secondary-sidebar .detalis ul li .address p {
+  margin: 0; }
+
+@media (max-width: 575.98px) {
+  .tour-show {
+    flex-wrap: wrap; }
+  .tour-show .side-left {
+    flex-basis: 100%; }
+  .tour-show .side-left .filter {
+    width: 50%; }
+  .tour-show .side-left button {
+    width: 25%; }
+  .tour-show .side-right {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    height: 100% !important; }
+  .tour-show .side-right .tour-item .image {
+    display: none; }
+  .tour-show .secondary-sidebar {
+    flex-basis: 100%;
+    border-radius: 10px;
+    margin-top: 18px; } }
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .tour-show {
+    flex-wrap: wrap; }
+  .tour-show .side-left {
+    flex-basis: 100%; }
+  .tour-show .side-left .filter {
+    width: 50%; }
+  .tour-show .side-left button {
+    width: 25%; }
+  .tour-show .side-right {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    height: 100% !important; }
+  .tour-show .secondary-sidebar {
+    flex-basis: 100%;
+    border-radius: 10px;
+    margin-top: 18px; } }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .tour-show {
+    flex-wrap: wrap; }
+  .tour-show .side-left {
+    flex-basis: 30%; }
+  .tour-show .side-left button {
+    width: 25%; }
+  .tour-show .side-right {
+    flex-basis: 70%;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    height: 100% !important; }
+  .tour-show .secondary-sidebar {
+    flex-basis: 100%;
+    border-radius: 10px;
+    margin-top: 18px; } }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .tour-show .side-right .frist-sidebar .tour-item .image {
+    display: none; }
+
+  .tour-show .side-left {
+    flex-basis: 13%; }
+
+  .tour-show .side-left .filter button {
+    flex-basis: 90%; }
+
+  .tour-show .side-right {
+    flex-basis: 40%; }
+
+  .tour-show .secondary-sidebar {
+    flex-basis: 47%; } }
+
+/*# sourceMappingURL=tour.css.map */

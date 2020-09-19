@@ -1,0 +1,154 @@
+$color1: rgba(102,51,153,.28);
+$color2: #7569b3;
+$color3: #639;
+$colortxt: #70657b;
+$bgcolor: #f8f9fa;
+$bgwhite: #fff;
+
+.tour-show{
+    display: flex;
+    justify-content: space-between;
+    .side-left{
+        flex-basis: 20%;
+        button{
+            background: $color2;
+            padding: 5px 0px;
+            margin: 0 auto;
+            width: 80%;
+            color: #fff;
+        }
+        .tour-main-nav{
+            list-style: none;
+            padding-left: 0;
+            li{
+                padding-bottom: 13px;
+                font-weight: 300;
+                a{
+                    text-decoration: none;
+                    i{
+                        color: $color2;
+                    }
+                }
+            }
+        }
+    }
+    .side-right{
+        flex-basis: 80%;
+        display: flex;
+        box-shadow: 0 1px 15px 1px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+        border-radius: 10px;
+        overflow: hidden;
+        .icon-order{
+            height: 52px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 1px 15px 1px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+            a{
+                text-decoration: none;
+                color: $color2;
+                i{
+                    font-size: 25px;
+                }
+                &:active{
+
+                }
+            }
+        }
+        .frist-sidebar{
+            flex-basis: 40%;
+            border-right: 1px solid #eee;
+            .tour-item{
+                display: flex;
+                height: 80px;
+                border-bottom: 1px solid #eee;
+                cursor: pointer;
+                align-items: center;
+                padding: 0px 15px;
+                .image{
+                    img{
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                    }
+                }
+                .details{
+                    flex: 1;
+                    margin-left: 8px;
+                    span{
+                        font-weight: 300;
+                    }
+                    p{
+                        margin: 0;
+                        font-size: 13px;
+                        font-weight: 300;
+                        padding-top: 5px;
+                    }
+                }
+                .date{
+                    font-size: 13px;
+                }
+                &:last-child{
+                    border-bottom: 0px solid #eee;
+                }
+                &:hover{
+                    background: #f8f9fa;
+                }
+            }
+        }
+        .secondary-sidebar{
+            flex-basis: 60%;
+            .detalis{
+                padding: 15px;
+                .gutters{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    img{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                    }
+                    .image{
+                        img{
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .details{
+                        flex: 1;
+                        margin-left: 8px;
+                        span{
+                            font-weight: 300;
+                        }
+                        p{
+                            margin: 0;
+                            font-size: 13px;
+                            font-weight: 300;
+                            padding-top: 5px;
+                        }
+                    }
+                    .date{
+                        font-size: 13px;
+                    }
+                }
+                .edit-stop{
+                    margin-top: 15px;
+                    .row{
+                        border-bottom: 1px solid #eee; 
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 15px 0;
+                        &:last-child{
+                            border-bottom: 0px;
+                        }           
+                    }
+                }
+            }
+        }
+
+    }
+}

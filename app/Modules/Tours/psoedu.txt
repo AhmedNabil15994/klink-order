@@ -1,0 +1,76 @@
+//buissness-customer page URL:(/geschaeftskundenportal)
+
+* add route /geschaeftskundenportal in App/Modules/Tours/routes.php
+
+//language file for this
+* create file tour /resoursces/lang/tour/main.php 
+==============
+create input field in 
+    /App/Modules/Views/ type DatePicker
+        ( minimum-date:today | defult date (current day) name trans(tour/main.$startDate) ).
+        
+
+create input field in 
+    /App/Modules/Views/ type TimePicker 
+        ( min: after 4 hours from now ) name=> trans(tour/main.$startTime).
+
+create week-days input field 
+    /App/Modules/Views type (Special)
+        (minimum-value: select one day | default : monday) name trans(tour/main.$tourDays).
+        function week-days-input-field(){
+            * make seven different checkboxes 
+            * values of checkboxes
+                value: day index of the week starting from monday, name: carbon translate of the day name
+                -----------------------------------------------------------------------------------------
+                value : 0, name : monday(en).
+            * min value : at least one checked.
+        } 
+
+function createNewTour($request){
+    
+    validateNewTour();
+    saveNewTour();
+}
+function validateNewTour(){
+    
+    tour_details=>[
+            number_of_stops=>'required|min:2',
+            total_weight=>'required|min:2',
+            stop_average_time=>'required|min:3',
+            number_of_packets=>'requried|min:1',
+            total_time=>'required|min: $stop_average_time * number_of_stops,
+            total_distance=>'required|min:5'
+    ];
+    validateStops()
+    
+    'week-days'=>'required|array|numbers|from:0,to:6.
+        ( 0 => monday , 6 => sunday)
+    
+}
+function validateStops(){
+    stops=>'required|array|min:1',
+        'stops.*' => 'required|array'
+        'stop.*.name' => 'required'
+        'stop.*.time' => 'required|min:3'
+        'stops.*.location.geometry' => 'required' {Err : trans(tour/errors.coordinates) },
+        'stops.*.location.geometry.lat' => 'required|numeric|min:-90|max:90' {Err : trans(tour/errors.coordinates) } ,
+        'stops.*.location.geometry.lng' => 'required|numeric|min:-180|max:180' {Err : trans(tour/errors.coordinates) } ,
+        'stops.*.location.address' => 'required|array' {Err : trans(tour/errors.coordinates) } ,
+        'stops.*.location.address.home' => 'required' {Err : trans(tour/errors.coordinates) } ,
+        'stops.*.location.address.postal_code' => 'required' {Err : trans(tour/errors.coordinates) } ,
+        'stops.*.location.address.strseet' => 'required' {Err : trans(tour/errors.coordinates) } ,
+        'stops.*.location.address.region' => 'required' {Err : trans(tour/errors.coordinates) } ,
+        'stops.*.location.address.city' => 'required' {Err : trans(tour/errors.coordinates) } ,
+        'stops.*.location.address.country' => 'required' {Err : trans(tour/errors.coordinates) } 
+
+}
+function saveNewTour(){
+
+    tour_dates table:
+        'days'=> json(request()->week-days)
+}
+
+
+
+
+

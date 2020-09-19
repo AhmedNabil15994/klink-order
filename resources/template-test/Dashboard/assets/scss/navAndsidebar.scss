@@ -1,0 +1,392 @@
+$color1: rgba(102,51,153,.28);
+$color2: #7569b3;
+$color3: #639;
+$colortxt: #70657b;
+$bgcolor: #f8f9fa;
+$bgwhite: #fff;
+
+/*================================================
+============ [  Table of contents  ] ============
+================================================
+01 - Global
+02 - Navbar
+03 - Sidebar
+04 - Main Content
+05 - Responsive
+===============================================*/
+.scrollbar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 50px;
+	background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar{
+	width: 0px;
+	background-color: #F5F5F5;
+}
+.scrollbar:hover::-webkit-scrollbar{
+	width: 8px;
+}
+.scrollbar::-webkit-scrollbar-thumb{
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+	border-radius: 50px;
+	background-color: rgba(85, 85, 85, 0.4);
+}
+/***********************************
+1. Start Global
+***********************************/
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+}
+button{
+    background: transparent;
+    border: 0px;
+    border-radius: 50px;
+    outline: 0;
+    cursor: pointer;
+}
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 20px;
+}
+.clearfix{
+    clear: both;
+}
+/***********************************
+End Global
+***********************************/
+
+
+/***********************************
+2. Start Navbar
+***********************************/
+nav {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    top: 0;
+    background: white;
+    box-shadow: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+    .container{
+        display: inherit;
+        align-items: inherit;
+    }
+    .navbar-logo img{
+        height: 60px;
+        width: auto;
+        float: left;
+    }
+    button{
+        height: 35px;
+        width: 40px;
+        background: #7569b3;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        font-size: 21px;
+        margin-left: 20px;
+    }
+    .menu{
+        display: flex;
+        margin-left: auto;
+        .fullscreen,.menu-drop,.notificaiton{
+            align-items: center;
+            display: flex;
+            background: $bgcolor;
+            margin: auto 10px;
+            height: 40px;
+            width: 40px;
+            border-radius: 15px;
+            cursor: pointer;
+            i{
+                margin: 0 auto;
+                display: block;
+                color: $color2;
+            }
+        }
+        .menu-drop{
+            position: relative;
+            .menu-icon{
+                display: none;
+                position: absolute;
+                top: 45px;
+                right: -90px;
+                width: 280px;
+                background-color: $bgwhite;
+                box-shadow: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+                padding: 15px;
+                a{
+                    width: 50%;
+                    text-align: center;
+                    padding: 20px 10px;
+                    display: block;
+                    float: left;
+                    text-decoration: none;
+                    &:hover{
+                        background-color: $bgcolor;
+                        border-radius: 15px;
+                    }
+                    i{
+                        padding-bottom: 10px;
+                        font-size: 24px;
+                    }
+                }
+            }
+            &:hover .menu-icon{
+                display: block;
+            }
+        }
+        .notificaiton{
+            position: relative;
+            .notificaiton-drop{
+                display: none;
+                width: 320px;
+                position: absolute;
+                top: 45px;
+                right: -80px;
+                box-shadow: 0 1px 15px rgba(0,0,0,.06), 0 1px 6px rgba(0,0,0,.06);
+                .notification-message{
+                    width: 100%;
+                    float: left;
+                    background-color: $bgcolor;
+                    height: 70px;
+                    border-bottom: 3px solid $color2;
+                    display: flex;
+                    align-items: center;
+                    & > div{
+                        float: left;
+                    }
+                    .icon{
+                        width: 20%;
+                        height: 100%;
+                        border-left: 5px solid $color2;
+                        display: flex;
+                        background: #eee;
+                        i{
+                            font-size: 26px;
+                            display: flex;
+                            align-items: center;
+                            
+                        }
+                    }
+                    .content{
+                        width: 80%;
+                        color: $colortxt;
+                        position: relative;
+                        line-height: 1.6;
+                        padding-left: 8px;
+                        .message{
+                            font-size: 15px;
+                            font-weight: 500;
+                        }
+                        .badge{
+                            border-radius: 13px;
+                            background: $color1;
+                            padding: 0px 6px 1px;
+                            font-size: 12px;
+                        }
+                        .text-time{
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            padding: 8px 5px 0 0;
+                            font-size: 12px;
+                        }
+                        p{
+                            margin: 0;
+                            font-size: 14px;
+                        }
+                    }
+                    &:last-child{
+                        border-bottom: 0px;
+                    }
+                    &:hover{
+                        background-color: $bgwhite;
+                    }
+                }                
+            }
+            &:hover .notificaiton-drop{
+                display: block;
+            }
+        }
+        .user img{
+            margin-left: 10px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+    }
+}
+/***********************************
+End Navbar
+***********************************/
+/***********************************
+3. Start side-bar
+***********************************/
+.side-bar{
+    position: fixed;
+    top: 80px;
+    height: calc(100vh - 80px);
+    background: $bgwhite;
+    box-shadow: 0 4px 20px 1px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.08);
+    float: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .navigation-one{
+        list-style: none;
+        text-align: center;
+        width: 120px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        .nav-item{
+            color: #332e38;
+            cursor: pointer;
+            border-bottom: 1px solid #dee2e6;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+                text-decoration: none;
+                i{
+                    font-size: 32px;
+                    height: 32px;
+                    width: 32px;
+                    display: block;
+                    margin: 0 auto 6px;
+                    color: $color2;
+                }
+                span{
+                    font-size: 15px;
+                    display: block;
+                    font-weight: 400;
+                    color: $color2;
+                }
+            }
+            &:hover::after{
+                content: " ";
+                width: 65px;
+                height: 65px;
+                background: $color2;
+                bottom: -35px;
+                right: -35px;
+                position: absolute;
+                transform: rotatez(45deg);
+            }
+        }
+        .nav-item{
+            position: relative;
+            .nav-child{
+                display: none;
+                position: fixed;
+                left: 120px;
+                z-index: 5;
+                background:$bgwhite;
+                width: 220px;
+                top: 80px;
+                box-shadow: 0 4px 20px 1px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.08);
+                height: 100vh;
+                ul{
+                    list-style: none;
+                    padding: 0;
+                    display: block;
+                    li{
+                        padding: 10px 0;
+                        i{
+                            font-size: 18px;
+                            color: $color2;
+                        }
+                        a{
+                            color: #332e38;
+                            text-transform: capitalize;
+                            display: inline-block;
+                            align-items: center;
+                            font-size: 13px;
+                            cursor: pointer;
+                            padding: 12px 24px;
+                            transition: all .15s ease-in;
+                        }
+                        &:hover{
+                            background: #eee;
+                        }
+                    }
+                }
+            }
+            &:hover .nav-child{
+                display: block;
+            }
+        }
+    }
+}
+.main-max{
+    width: 100% !important;
+}
+.hidden-nav{
+    display: none;
+}
+/***********************************
+3. End side-bar
+***********************************/
+/***********************************
+4. Start Main Content
+***********************************/
+.main-content{
+    width: calc(100% - 120px);
+    margin-top: 80px;
+    position: static;
+    float: right;
+    padding: 25px 35px 0 35px;
+}
+/***********************************
+End Main Content
+***********************************/
+/***********************************
+5. Start Responsive
+***********************************/
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    nav .container {
+        padding-left: 15px;
+        padding-right: 15px; }
+    //side bar
+    .side-bar{
+        display: none;
+    }
+    //Main Content
+    .main-content{
+        width: 100%;
+    }
+}
+// Small devices (landscape phones, 576px and up) And Medium devices (tablets, 768px and up)
+@media (min-width: 576px) and (max-width: 991.98px) {
+    nav .container {
+        padding-left: 15px;
+        padding-right: 15px; }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    //Nav Bar
+    .nav .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+/***********************************
+End Responsive
+***********************************/

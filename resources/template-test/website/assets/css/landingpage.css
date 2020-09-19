@@ -1,0 +1,383 @@
+*, ::after, ::before {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Raleway', sans-serif; }
+
+button {
+  background: transparent;
+  border: 0px;
+  border-radius: 50px;
+  outline: 0;
+  cursor: pointer; }
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 15px; }
+
+.landing .about-us {
+  overflow: hidden;
+  padding-top: 24px; }
+.landing .about-us .container {
+  display: flex;
+  flex-wrap: wrap; }
+.landing .about-us .item-title {
+  flex-basis: 60%; }
+.landing .about-us .item-title .header-title {
+  text-align: left; }
+.landing .about-us .item-title .header-title h2 {
+  color: #f6ab49;
+  font-size: 48px;
+  margin-bottom: 0; }
+.landing .about-us .item-title .header-title p {
+  color: #666666;
+  font-size: 16px;
+  font-weight: 300;
+  width: 82%;
+  margin-bottom: 5px;
+  line-height: 1.4; }
+.landing .about-us .item-title .box-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+.landing .about-us .item-title .box-items .box-item {
+  flex-basis: 48%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  border: 1px solid #eee;
+  box-shadow: 0px 2px 22px #eee;
+  border-radius: 10px;
+  padding: 20px 10px;
+  transition: all 0.5s ease-out; }
+.landing .about-us .item-title .box-items .box-item .info-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+.landing .about-us .item-title .box-items .box-item .info-icon i {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FAFAFA;
+  font-size: 28px;
+  background: #f46b45;
+  background: -webkit-linear-gradient(to right, #eea849, #f46b45);
+  background: linear-gradient(to right, #eea849, #f46b45); }
+.landing .about-us .item-title .box-items .box-item .info-text {
+  padding-left: 10px; }
+.landing .about-us .item-title .box-items .box-item .info-text h4 {
+  color: #f6ab49;
+  font-size: 19px;
+  margin: 0; }
+.landing .about-us .item-title .box-items .box-item .info-text p {
+  padding-top: 3px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0; }
+.landing .about-us .item-title .box-items .box-item:hover {
+  transform: scale(1.1, 1.1); }
+.landing .about-us .images {
+  flex-basis: 40%; }
+.landing .about-us .images img {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 70px; }
+.landing .section-imge {
+  display: flex;
+  background: #eee;
+  min-height: 500px;
+  overflow: hidden; }
+.landing .section-imge .image {
+  flex-basis: 48%; }
+.landing .section-imge .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+.landing .section-imge .text {
+  flex-basis: 52%;
+  padding: 40px 40px 0px 30px; }
+.landing .section-imge .text h2 {
+  font-size: 48px;
+  margin: 18px 0px 24px;
+  color: #f6ab49; }
+.landing .section-imge .text em {
+  color: #666666;
+  line-height: 1.5;
+  font-size: 18px;
+  display: inline-block;
+  padding-right: 45px;
+  font-weight: 300;
+  margin-bottom: 5px; }
+.landing .section-imge .text p {
+  padding-right: 45px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 35px; }
+.landing .section-imge .text button {
+  background: #f46b45;
+  background: -webkit-linear-gradient(to right, #eea849, #f46b45);
+  background: linear-gradient(to right, #eea849, #f46b45);
+  padding: 13px 35px 12px; }
+.landing .section-imge .text button a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px; }
+.landing .service {
+  overflow: hidden;
+  padding: 20px 0px 30px;
+  border-bottom: 5px solid #f6ab49; }
+.landing .service .container {
+  display: flex;
+  flex-wrap: wrap; }
+.landing .service .header-title {
+  text-align: center;
+  margin: 0 auto; }
+.landing .service .header-title h2 {
+  color: #f6ab49;
+  font-size: 48px;
+  margin-bottom: 0; }
+.landing .service .header-title p {
+  color: #666666;
+  font-size: 18px;
+  font-weight: 300; }
+.landing .service .box-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px; }
+.landing .service .box-items .row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px; }
+.landing .service .box-items .box-item {
+  flex-basis: 28%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 35px 20px;
+  text-align: center;
+  box-shadow: 0px 2px 22px #eee;
+  justify-content: space-around;
+  min-height: 280px;
+  transition: all 0.5s ease-out; }
+.landing .service .box-items .box-item .info-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+.landing .service .box-items .box-item .info-icon i {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FAFAFA;
+  margin-bottom: 12px;
+  font-size: 35px;
+  background: #f46b45;
+  background: -webkit-linear-gradient(to right, #eea849, #f46b45);
+  background: linear-gradient(to right, #eea849, #f46b45); }
+.landing .service .box-items .box-item .info-icon h4 {
+  color: #f6ab49;
+  font-size: 19px;
+  margin: 0; }
+.landing .service .box-items .box-item .info-text p {
+  color: #999999;
+  margin: 10px 0px 5px; }
+.landing .service .box-items .box-item:hover {
+  transform: scale(1.1, 1.1); }
+.landing .our-clients {
+  background: url(../img/client.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  padding: 100px 0px 80px;
+  border-bottom: 5px solid #f6ab49; }
+.landing .our-clients .text {
+  text-align: center; }
+.landing .our-clients .text h2 {
+  color: #f6ab49;
+  font-size: 48px;
+  margin: 0; }
+.landing .our-clients .text p {
+  font-size: 18px;
+  color: #FAFAFA; }
+.landing .our-clients .images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0px 30px; }
+
+@media (max-width: 575.98px) {
+  .landing .about-us {
+    padding: 0 0 30px; }
+
+  .landing .about-us .item-title .header-title h2 {
+    font-size: 26px; }
+
+  .landing .about-us .item-title {
+    flex-basis: 100%; }
+
+  .landing .about-us .item-title .box-items .box-item {
+    margin-top: 15px;
+    flex-direction: column;
+    flex-basis: 100%; }
+  .landing .about-us .item-title .box-items .box-item .info-icon {
+    justify-content: center; }
+  .landing .about-us .item-title .box-items .box-item .info-text {
+    padding-left: 0px;
+    text-align: center;
+    padding-top: 14px; }
+  .landing .about-us .item-title .box-items .box-item:hover {
+    transform: scale(1, 1); }
+
+  .landing .about-us .images {
+    display: none; }
+
+  .landing .section-imge {
+    flex-direction: column; }
+
+  .landing .section-imge .text {
+    padding: 0px 40px 20px 30px; }
+
+  .landing .section-imge .text p {
+    margin-bottom: 20px; }
+
+  .landing .service .header-title h2 {
+    margin-top: 6px; }
+
+  .landing .service .box-items .row {
+    margin-bottom: 0px;
+    flex-wrap: wrap; }
+
+  .landing .service .box-items .box-item {
+    flex-basis: 100%;
+    margin-bottom: 15px; }
+  .landing .service .box-items .box-item:hover {
+    transform: scale(1, 1); }
+
+  .landing .our-clients .images {
+    flex-wrap: wrap;
+    padding: 40px 0px 0px; }
+  .landing .our-clients .images .client-img {
+    flex-basis: 30%;
+    margin-bottom: 25px; }
+  .landing .our-clients .images .client-img img {
+    display: block;
+    margin: 0 auto; } }
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .landing .about-us {
+    padding: 0 0 50px; }
+
+  .landing .about-us .item-title .header-title h2 {
+    font-size: 44px; }
+
+  .landing .about-us .item-title {
+    flex-basis: 100%; }
+
+  .landing .about-us .item-title .box-items .box-item {
+    margin-top: 15px;
+    flex-direction: column; }
+  .landing .about-us .item-title .box-items .box-item .info-icon {
+    justify-content: center; }
+  .landing .about-us .item-title .box-items .box-item .info-text {
+    padding-left: 0px;
+    text-align: center;
+    padding-top: 14px; }
+  .landing .about-us .item-title .box-items .box-item:hover {
+    transform: scale(1, 1); }
+
+  .landing .about-us .images {
+    display: none; }
+
+  .landing .section-imge {
+    flex-direction: column; }
+
+  .landing .section-imge .text {
+    padding: 0px 40px 20px 30px; }
+
+  .landing .section-imge .text p {
+    margin-bottom: 20px; }
+
+  .landing .service .box-items .row {
+    margin-bottom: 0px;
+    flex-wrap: wrap; }
+
+  .landing .service .box-items .box-item {
+    flex-basis: 60%;
+    margin-bottom: 15px; }
+  .landing .service .box-items .box-item:hover {
+    transform: scale(1, 1); }
+
+  .landing .our-clients .images {
+    flex-wrap: wrap;
+    padding: 40px 0px 0px; }
+  .landing .our-clients .images .client-img {
+    flex-basis: 30%;
+    margin-bottom: 25px; }
+  .landing .our-clients .images .client-img img {
+    display: block;
+    margin: 0 auto; } }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .landing .about-us {
+    padding: 0 0 50px; }
+
+  .landing .about-us .item-title {
+    flex-basis: 100%; }
+
+  .landing .about-us .item-title .box-items .box-item {
+    margin-top: 15px; }
+  .landing .about-us .item-title .box-items .box-item:hover {
+    transform: scale(1, 1); }
+
+  .landing .about-us .images {
+    display: none; }
+
+  .landing .section-imge .text {
+    padding: 0px 40px 20px 30px; }
+
+  .landing .section-imge .text p {
+    margin-bottom: 20px; }
+
+  .landing .service .box-items .box-item {
+    flex-basis: 30%; }
+
+  .landing .our-clients .images {
+    flex-wrap: wrap;
+    padding: 40px 0px 0px; }
+  .landing .our-clients .images .client-img {
+    flex-basis: 30%;
+    margin-bottom: 25px; }
+  .landing .our-clients .images .client-img img {
+    display: block;
+    margin: 0 auto; } }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .landing .about-us {
+    padding: 0 0 50px; }
+
+  .landing .about-us .item-title {
+    flex-basis: 100%; }
+
+  .landing .about-us .item-title .box-items .box-item {
+    margin-top: 15px; }
+  .landing .about-us .item-title .box-items .box-item:hover {
+    transform: scale(1, 1); }
+
+  .landing .about-us .images {
+    display: none; }
+
+  .landing .section-imge .text p {
+    margin-bottom: 20px; } }
+
+/*# sourceMappingURL=landingpage.css.map */

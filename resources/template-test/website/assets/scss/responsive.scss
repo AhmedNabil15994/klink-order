@@ -1,0 +1,175 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    nav .container {
+        padding-left: 15px;
+        padding-right: 15px; }
+    //side bar
+    .side-bar{
+        display: none;
+    }
+    //Main Content
+    .main-content{
+        width: 100%;
+    }
+    //box-card
+    .main-content .box-card{
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .main-content .box-card .card{
+        flex-basis: 100%;
+        margin: 20px 0px 0px;
+    }
+
+    // side-meun column
+    .main-content .side-meun{
+        flex-wrap: wrap;
+    }
+    .main-content .side-meun .column{
+        width: 100%;
+    }
+
+    // side-meun table
+    .main-content .side-meun .new-user .table-user{
+        overflow-x: scroll;
+    }
+    .main-content .side-meun .new-user .table-user table{
+        width: 100%;
+    }
+
+    //Top Selling
+    .main-content .side-meun .top-Selling{
+        margin-bottom: 10px;
+    }
+    .main-content .side-meun .top-Selling .card-body{
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+    .main-content .side-meun .top-Selling .card-body:last-child{
+        margin-bottom: 0px;
+    }
+    .main-content .side-meun .top-Selling .card-body .image-card{
+        flex: 1;
+        flex-basis: 100%;
+        height: 100px;
+        width: 100px;
+        margin: 0 auto 10px;
+    }
+    .main-content .side-meun .top-Selling .card-body .content{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .main-content .side-meun .top-Selling .card-body .view-details{
+        flex-basis: 100%;
+    }
+    .main-content .side-meun .top-Selling .card-body .view-details button{
+        margin: 8px auto;
+        display: block;
+    }
+    //pricing
+    .pricing{
+        flex-wrap: wrap;
+        flex-direction: column;
+        .box-pricing{
+            margin: 20px 0px 20px 0px; 
+        }
+    }
+    //Tour page
+    .tour-show{
+        flex-wrap: wrap;
+        .side-left{
+            flex-basis: 100%;
+            button{
+                width: 50%;
+            }
+        }
+        .side-right{
+            flex-basis: 100%;
+            flex-wrap: wrap;
+            .frist-sidebar,.secondary-sidebar{
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up) And Medium devices (tablets, 768px and up)
+@media (min-width: 576px) and (max-width: 991.98px) {
+    nav .container {
+        padding-left: 15px;
+        padding-right: 15px; }
+    //box-card
+    .main-content .box-card{
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .main-content .box-card .card{
+        flex-basis: 47%;
+        margin-bottom: 0px !important;
+    }
+    .main-content .box-card .card:nth-child(2){
+        margin: 20px 0px 20px 12px;
+    }
+    .main-content .box-card .card:nth-child(3){
+        margin: 20px 12px 20px 0px; 
+    }
+
+    // side-meun column
+    .main-content .side-meun{
+        flex-wrap: wrap;
+    }
+    .main-content .side-meun .column{
+        width: 100%;
+    }
+
+    // side-meun table
+    .main-content .side-meun .new-user .table-user{
+        overflow-x: scroll;
+    }
+    .main-content .side-meun .new-user .table-user table{
+        width: 100%;
+    }
+    //pricing
+    .pricing{
+        flex-wrap: wrap;
+        flex-direction: column;
+        .box-pricing{
+            margin: 20px 0px 20px 0px; 
+        }
+    }
+    //Tour page
+    .tour-show{
+        flex-wrap: wrap;
+        .side-left{
+            flex-basis: 100%;
+            button{
+                width: 25%;
+            }
+        }
+        .side-right{
+            flex-basis: 100%;
+            flex-wrap: wrap;
+            .frist-sidebar,.secondary-sidebar{
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    //Nav Bar
+    .nav .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    //side-meun table
+    .main-content .side-meun .new-user .table-user{
+        overflow-x: scroll;
+    }
+    //Top Selling
+    .main-content .side-meun .top-Selling .card-body .view-details button{
+        padding: 7px 4px 6px;
+        font-size: 11px;
+    }
+}
